@@ -1,5 +1,5 @@
 const Router = require('../framework/Router');
-const genreController = require('../controller/genre-controller');
+const genreController = require('../controller/genre_controller');
 const router = new Router();
 
 router.post('/genre', genreController.createGenre);

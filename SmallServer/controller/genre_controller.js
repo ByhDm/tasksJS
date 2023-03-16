@@ -7,7 +7,7 @@ const createGenre = async (req, res) => {
 }
 
 const getGenresByFilm = async (req, res) => {
-    const id = req.query.id;
+    const id = req.params.id;
     const genres = await db.query('SELECT * FROM genres WHERE film_id = $1', [id]);
     res.send(genres.rows);
 }
